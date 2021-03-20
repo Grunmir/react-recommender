@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Slider from 'rc-slider';
+import Slider from '@material-ui/core/Slider';
 
 import { MEASURE } from '../../utils/recommender';
 
@@ -9,15 +8,14 @@ import 'rc-slider/assets/index.css';
 function RecommenderAnswetRank({ answer, onClickAnswet }) {
   const { context, fromValue, toValue, step, text } = answer;
   const defaultValue = MEASURE[context].value;
-
   const [value, setValue] = React.useState(defaultValue);
 
   function handleClick() {
     onClickAnswet({ ...answer, valueRank: value });
   }
 
-  function onChangeSlider(event) {
-    setValue(event);
+  function onChangeSlider(event, value) {
+    setValue(value);
   }
 
   return (
@@ -26,7 +24,6 @@ function RecommenderAnswetRank({ answer, onClickAnswet }) {
 
       <Slider
         className="recommender-answet-rank__slider"
-        defaultValue={defaultValue}
         max={toValue}
         min={fromValue}
         onChange={onChangeSlider}

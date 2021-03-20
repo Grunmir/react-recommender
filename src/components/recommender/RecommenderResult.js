@@ -12,7 +12,6 @@ function RecommenderResult({ results }) {
 
       {results.map((result) => (
         <li key={result.id}>
-          <span>{result.id} </span>
           <span>{result.text}</span>
 
           {result.valueRank && (

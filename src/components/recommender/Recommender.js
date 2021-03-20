@@ -1,4 +1,5 @@
 import React from 'react';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 import RecommenderAnswet from './RecommenderAnswet';
 import RecommenderAnswetRank from './RecommenderAnswetRank';
@@ -8,7 +9,7 @@ function Recommender({ isPrevious, onClickAnswet, onClickPrevious, question }) {
     <>
       {isPrevious && (
         <p className="recommender__previous" onClick={onClickPrevious}>
-          Anterior
+          <ArrowBackIosIcon /> <span>Anterior</span>
         </p>
       )}
 
