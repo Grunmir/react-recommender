@@ -1,6 +1,6 @@
 # Instalación
 
-Para que la aplicación funcione hay que crear un archivo environment.js con la dirección de la API y su KEY en el directorio src/environments/environment.js
+Para que la aplicación funcione hay que crear un archivo **environment.js** con la dirección de la API y su KEY en el directorio src/environments/environment.js
 
 ## Script disponibles
 
