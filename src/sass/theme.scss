@@ -32,13 +32,17 @@ span {
 }
 
 .btn {
+  align-items: center;
+  justify-content: center;
   background-color: #67b2e3;
   border-radius: 8px;
   border: 1px solid;
   color: #fff;
   cursor: pointer;
+  display: flex;
   font-weight: 700;
   margin: 12px;
+  min-height: 55px;
   padding: 20px;
-  width: 200px;
+  width: 180px;
 }

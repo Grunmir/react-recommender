@@ -7,6 +7,7 @@
 
 .recommender__answet {
   display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -21,6 +22,7 @@
 .recommender__previous {
   display: flex;
   align-items: center;
+  margin-top: 20px;
   cursor: pointer;
 
   span {

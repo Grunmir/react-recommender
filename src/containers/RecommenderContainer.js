@@ -1,10 +1,12 @@
 import React from 'react';
+import { useToasts } from 'react-toast-notifications';
 
 import Recommender from '../components/recommender/Recommender';
 import RecommenderResult from '../components/recommender/RecommenderResult';
 import { getQuestion } from '../services/questions';
 
 function RecommenderContainer() {
+  const { addToast } = useToasts();
   const initQuestionId = 1;
   const [question, setQuestion] = React.useState(undefined);
   const [questions, setQuestions] = React.useState([]);
@@ -16,7 +18,9 @@ function RecommenderContainer() {
       const data = await getQuestion(id);
       setQuestion(data);
       setQuestionsPushPop(data);
-    } catch (error) {}
+    } catch (error) {
+      addToast('Error en la solicitud', { appearance: 'error' });
+    }
   }
 
   function onClickAnswet(answet) {
@@ -24,6 +28,7 @@ function RecommenderContainer() {
     setResultsPushPop(answet);
 
     if (linkedQuestionId) {
+      setQuestion(undefined);
       getData(linkedQuestionId);
     } else {
       setIsFinished(true);
