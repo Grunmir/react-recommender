@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Slider from 'rc-slider';
+// import Slider from 'rc-slider';
 
 import { MEASURE } from '../../utils/recommender';
 
@@ -24,7 +24,7 @@ function RecommenderAnswetRank({ answer, onClickAnswet }) {
     <div className="recommender-answet-rank">
       <p>{text}</p>
 
-      <Slider
+      {/* <Slider
         className="recommender-answet-rank__slider"
         defaultValue={defaultValue}
         max={toValue}
@@ -32,7 +32,7 @@ function RecommenderAnswetRank({ answer, onClickAnswet }) {
         onChange={onChangeSlider}
         step={step}
         value={value}
-      />
+      /> */}
 
       <p className="recommender-answet-rank__value">
         {value} {MEASURE[context].measure}
