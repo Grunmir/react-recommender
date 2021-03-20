@@ -4,7 +4,7 @@ Para que la aplicación funcione hay que crear un archivo **environment.js** con
 
 ## Script disponibles
 
-Demo visible de la APP **[http://localhost:3000](Recomendador)**
+Demo visible de la APP **[https://lv9r6.csb.app/recomendador](Recomendador)**
 
 ## Script disponibles
 
