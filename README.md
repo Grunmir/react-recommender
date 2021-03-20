@@ -4,6 +4,10 @@ Para que la aplicación funcione hay que crear un archivo **environment.js** con
 
 ## Script disponibles
 
+Demo visible de la APP **[http://localhost:3000]Recomendador**
+
+## Script disponibles
+
 En el directorio del proyecto, puede ejecutar:
 
 ### `npm start`
