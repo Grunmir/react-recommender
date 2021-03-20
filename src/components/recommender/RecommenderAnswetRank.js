@@ -3,8 +3,6 @@ import Slider from '@material-ui/core/Slider';
 
 import { MEASURE } from '../../utils/recommender';
 
-import 'rc-slider/assets/index.css';
-
 function RecommenderAnswetRank({ answer, onClickAnswet }) {
   const { context, fromValue, toValue, step, text } = answer;
   const defaultValue = MEASURE[context].value;
