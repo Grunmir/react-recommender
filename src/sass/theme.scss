@@ -1,0 +1,42 @@
+// RECOMMENDER:
+@import './home/index.scss';
+@import './recommender/index.scss';
+
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 20px;
+}
+a,
+p,
+span {
+  font-size: 12px;
+}
+
+.app-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+.btn {
+  background-color: #67b2e3;
+  border-radius: 8px;
+  border: 1px solid;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 12px;
+  padding: 20px;
+  width: 200px;
+}
