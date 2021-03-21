@@ -1,12 +1,17 @@
 import React from 'react';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, useTransition, animated } from 'react-spring';
 
 import RecommenderAnswet from './RecommenderAnswet';
 import RecommenderAnswetRank from './RecommenderAnswetRank';
 
 function Recommender({ isPrevious, onClickAnswet, onClickPrevious, question }) {
   const animation = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const answers = useTransition(question.answers, (item) => item.id, {
+    from: { transform: 'translate3d(0,-40px,0)' },
+    enter: { transform: 'translate3d(0,0px,0)' },
+    leave: { transform: 'translate3d(0,-40px,0)' },
+  });
 
   return (
     <>
@@ -22,20 +27,20 @@ function Recommender({ isPrevious, onClickAnswet, onClickPrevious, question }) {
         <animated.h2 style={animation}>{question.text}</animated.h2>
 
         <div className="recommender__answet">
-          {question.answers.map((answer) => (
-            <div key={answer.id}>
-              {answer.context ? (
+          {answers.map(({ item, props, key }) => (
+            <animated.div key={key} style={props}>
+              {item.context ? (
                 <RecommenderAnswetRank
-                  answer={answer}
+                  answer={item}
                   onClickAnswet={onClickAnswet}
                 />
               ) : (
                 <RecommenderAnswet
-                  answer={answer}
+                  answer={item}
                   onClickAnswet={onClickAnswet}
                 />
               )}
-            </div>
+            </animated.div>
           ))}
         </div>
       </div>

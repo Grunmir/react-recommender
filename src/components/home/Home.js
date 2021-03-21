@@ -6,7 +6,9 @@ function Home(props) {
     <div className="home">
       <h1>Recomendador de Bicicletas</h1>
 
-      <img src="/home/bicycle.png" alt="Bicicleta" className="home__bicycle" />
+      <div className="home__bicycle">
+        <img id="bicycle" src="/home/bicycle.png" alt="Bicicleta" />
+      </div>
 
       <span>¿Tienes dudas sobre qué bicicleta comprar?</span>
       <span>¡El Recomendador te responde!</span>

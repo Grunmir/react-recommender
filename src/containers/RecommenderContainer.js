@@ -38,7 +38,11 @@ function RecommenderContainer() {
   function onClickPrevious() {
     const newQuestions = setQuestionsPushPop();
     setResultsPushPop();
-    setQuestion(newQuestions[newQuestions.length - 1]);
+    setQuestion(undefined);
+
+    setTimeout(() => {
+      setQuestion(newQuestions[newQuestions.length - 1]);
+    }, 50);
   }
 
   function setQuestionsPushPop(data = undefined) {
